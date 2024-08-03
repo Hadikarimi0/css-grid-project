@@ -72,6 +72,7 @@ ul {
 .container_site {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 0 0.5rem;
 }
 
 .navgation {
@@ -129,4 +130,81 @@ ul {
 
 a {
     text-decoration: none;
+}
+.nav_menu_sidbar {
+    position: fixed;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    background-color: #E1F5FE;
+    height: 100%;
+    padding: 1rem;
+    width: 25%;
+    border-right: 1px solid var(--color_323232);
+    transform: translateX(-384px);
+    -webkit-transform: translateX(-384px);
+    -moz-transform: translateX(-384px);
+    -ms-transform: translateX(-384px);
+    -o-transform: translateX(-384px);
+    transition: all 220ms ease-in 100ms;
+    -webkit-transition: all 220ms ease-in 100ms;
+    -moz-transition: all 220ms ease-in 100ms;
+    -ms-transition: all 220ms ease-in 100ms;
+    -o-transition: all 220ms ease-in 100ms;
+    
+}
+.nav_menu_sidbar li a:hover{
+    font-size: 1.1rem;
+    transition: font-size 250ms ease-in;
+    -webkit-transition: font-size 250ms ease-in;
+    -moz-transition: font-size 250ms ease-in;
+    -ms-transition: font-size 250ms ease-in;
+    -o-transition: font-size 250ms ease-in;
+}
+#input_menu:checked + label + ul {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+#input_menu:checked + label #close_icon {
+    display: block;
+    transition: all 220ms ease-in 100ms;
+}
+#input_menu:checked+label svg:first-child {
+    display: none;
+    transition: all 220ms ease-in 100ms;
+}
+#close_icon {
+    display: none;
+    transition: all 220ms ease-in 100ms;
+}
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 834px) {
+    .navgation {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .navgation > ul {
+        display: none;
+    }
+
+    .link_navgation {
+        justify-self: center;
+    }
+
+    .menu__icon {
+        justify-self: flex-end;
+    }
+    
+}
+
+@media only screen and (min-width: 835px) {
+
+
+    .menu_icon {
+        display: none;
+    }
 }
